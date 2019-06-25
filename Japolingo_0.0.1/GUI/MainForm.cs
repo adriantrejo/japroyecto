@@ -40,8 +40,6 @@ namespace Japolingo_0._0._1.GUI
         private void button2_Click(object sender, EventArgs e)
         {
             new Examenes().Show();
-            Examen exam = new Examen();
-            exam.RellenarListas();
         }
     }
 }

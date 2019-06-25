@@ -26,9 +26,9 @@ namespace Japolingo_0._0._1.Implementaciones
                 DataTable dt = con.select("Select * from Preguntas", sqlParams);
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    this.preguntas.Add(dt.Rows[i][0].ToString());
-                    this.respuestas.Add(dt.Rows[i][1].ToString());
-                    this.tipo.Add(dt.Rows[i][2].ToString());
+                    this.preguntas.Add(dt.Rows[i][1].ToString());
+                    this.respuestas.Add(dt.Rows[i][2].ToString());
+                    this.tipo.Add(dt.Rows[i][3].ToString());
                     this.leccion.Add(1.ToString());
                 }
                 con.close();
@@ -38,15 +38,30 @@ namespace Japolingo_0._0._1.Implementaciones
                 MessageBox.Show("El error es" + e.ToString());
             }
         }
-        public void Rellenar()
+        public List<string> Randomize(int n, List<string> lista)
         {
-            string labelB = "label";
-            int numberLabel = 11;
-            for (int i = 0; i < preguntas.Count; i++)
+            try
             {
-                string conLabel = labelB + numberLabel.ToString();
-                conLabel.Text = preguntas[i];
-                numberLabel += 1;
+                List<string> randomList = new List<string>();
+                Random r = new Random();
+                int randomIndex = 0;
+                int i = 0;
+                while (i<n)
+                {
+                    randomIndex = r.Next(0, lista.Count); //Choose a random object in the list
+                    randomList.Add(lista[randomIndex]); //add it to the new, random list
+                    lista.RemoveAt(randomIndex); //remove to avoid duplicates
+                    i++;
+                }
+
+                return randomList; //return the new random list
+
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("El error es" + e.ToString());
+                return new List<string>();
             }
         }
     }
