@@ -22,7 +22,7 @@ namespace Japolingo_0._0._1
         }
         public static class Cadena
         {
-            public static string CadenaC = @"Server = tcp:japolingo.database.windows.net,1433;Initial Catalog = Japolingo; Persist Security Info=False;User ID = Adriantrejo; Password=Supern1717;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30";
+            public static string CadenaC = @"Server = tcp:japolingo.database.windows.net,1433;Initial Catalog = Japolingo; Persist Security Info=False;User ID = Adriantrejo; Password=XXXX;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30";
         }
     }
 }
