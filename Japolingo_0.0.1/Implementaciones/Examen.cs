@@ -26,10 +26,10 @@ namespace Japolingo_0._0._1.Implementaciones
                 DataTable dt = con.select("Select * from Preguntas", sqlParams);
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    this.preguntas.Add(dt.Rows[i][1].ToString());
-                    this.respuestas.Add(dt.Rows[i][2].ToString());
-                    this.tipo.Add(dt.Rows[i][3].ToString());
-                    this.leccion.Add(1.ToString());
+                    preguntas.Add(dt.Rows[i][1].ToString());
+                    respuestas.Add(dt.Rows[i][2].ToString());
+                    tipo.Add(dt.Rows[i][3].ToString());
+                    leccion.Add(1.ToString());
                 }
                 con.close();
             }
@@ -38,22 +38,27 @@ namespace Japolingo_0._0._1.Implementaciones
                 MessageBox.Show("El error es" + e.ToString());
             }
         }
-        public List<string> Randomize(int n, List<string> lista)
+        public List<List<string>> Randomize(int n, List<string> listap, List<string> listar)
         {
             try
             {
-                List<string> randomList = new List<string>();
+                List<List<string>> randomList = new List<List<string>>();
+                List<string> randompList = new List<string>();
+                List<string> randomrList = new List<string>();
                 Random r = new Random();
                 int randomIndex = 0;
                 int i = 0;
                 while (i<n)
                 {
-                    randomIndex = r.Next(0, lista.Count); //Choose a random object in the list
-                    randomList.Add(lista[randomIndex]); //add it to the new, random list
-                    lista.RemoveAt(randomIndex); //remove to avoid duplicates
+                    randomIndex = r.Next(0, listap.Count); //Choose a random object in the list
+                    randompList.Add(listap[randomIndex]); // añadimos a la lista de preguntas
+                    randomrList.Add(listar[randomIndex]); // añadimos a la lista de preguntas
+                    listap.RemoveAt(randomIndex); //remove to avoid duplicates
+                    listar.RemoveAt(randomIndex); //remove to avoid duplicates
                     i++;
                 }
-
+                randomList.Add(randompList);
+                randomList.Add(randomrList);
                 return randomList; //return the new random list
 
 
@@ -61,7 +66,27 @@ namespace Japolingo_0._0._1.Implementaciones
             catch (Exception e)
             {
                 MessageBox.Show("El error es" + e.ToString());
-                return new List<string>();
+                return new List<List<string>>();
+            }
+        }
+        public List<int> Correctas(List<string> respuestasI, List<string> respuestasC)
+        {
+            try
+            {
+                List<int> correctas = new List<int>();
+                for (int i = 0; i < respuestasI.Count; i++)
+                {
+                    if (respuestasI[i] == respuestasC[i])
+                    {
+                        correctas.Add(i);
+                    }
+                }
+                return correctas;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("El error es" + e.ToString());
+                return new List<int>();
             }
         }
     }

@@ -13,24 +13,39 @@ namespace Japolingo_0._0._1.GUI
 {
     public partial class Examenes : Form
     {
+        List<string> respuestasI = new List<string>();
+        List<string> respuestasC = new List<string>();
+
         public Examenes()
         {
             InitializeComponent();
-            this.CenterToScreen();
-            Examen exam = new Examen();
-            exam.RellenarListas();
-            List<string> preguntas = exam.preguntas;
-            preguntas = exam.Randomize(10, preguntas);
-            label11.Text = preguntas[0];
-            label12.Text = preguntas[1];
-            label13.Text = preguntas[2];
-            label14.Text = preguntas[3];
-            label15.Text = preguntas[4];
-            label16.Text = preguntas[5];
-            label17.Text = preguntas[6];
-            label18.Text = preguntas[7];
-            label19.Text = preguntas[8];
-            label20.Text = preguntas[9];
+            foreach (Label lbl in this.Controls.OfType<Label>())
+            {
+                lbl.BackColor = Color.Transparent;
+            }
+            this.CenterToScreen(); //Inicializamos y lo centramos a pantalla
+
+            Examen exam = new Examen(); //Creamos nuevo objeto de la clase examen
+            exam.RellenarListas(); //Ejecutamos el constructor
+
+            List<string> preguntas = exam.preguntas;  //Asociamos las preguntas y respuestas correspondientes totales
+            List<string> respuestas = exam.respuestas;
+            List<List<string>> dupla = new List<List<string>>(); //Creamos una lista de listas
+            dupla = exam.Randomize(10, preguntas,respuestas); //Ahora aleatorizamos las preguntas
+            preguntas = dupla[0]; //Asignamos las preguntas y respuestas correspondientes
+            respuestas = dupla[1];
+            respuestasC = respuestas; //Asignamos la variable local a una del formulario
+
+            //Rellenamos los labels de el formulario
+            int i = 0;
+            foreach (Label lbl in this.Controls.OfType<Label>())
+            {
+                if (!lbl.Text.Contains("Pregunta"))
+                {
+                    lbl.Text = preguntas[9-i];
+                    i++;
+                }
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -46,6 +61,31 @@ namespace Japolingo_0._0._1.GUI
         private void Label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Examen exam = new Examen();
+            string[] resp = { textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, textBox12.Text };
+            respuestasI.AddRange(resp);
+            List<int> correctas = exam.Correctas(respuestasI, respuestasC);
+            int score = correctas.Count;
+            MessageBox.Show("Tu puntuación del examen es de "+score+"\nA continuación te muestro las respuestas incorrectas y su respuesta");
+            //Vemos si está contenido en la lista de correctas entonces pintamos el textbox de verde
+            int i = 0;
+            foreach (TextBox txtb in this.Controls.OfType<TextBox>())
+            {
+                if (correctas.Contains(9-i))
+                {
+                    txtb.BackColor = Color.Green;
+                }
+                else
+                {
+                    txtb.BackColor = Color.Red;
+                    txtb.Text = respuestasC[9-i];
+                }
+                i++;
+            }
         }
     }
 }

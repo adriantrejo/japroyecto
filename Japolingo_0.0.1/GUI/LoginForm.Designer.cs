@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.BoxUser = new System.Windows.Forms.TextBox();
             this.BoxPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,7 +38,7 @@
             // 
             // BoxUser
             // 
-            this.BoxUser.Location = new System.Drawing.Point(23, 65);
+            this.BoxUser.Location = new System.Drawing.Point(25, 65);
             this.BoxUser.Name = "BoxUser";
             this.BoxUser.Size = new System.Drawing.Size(290, 20);
             this.BoxUser.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // BoxPassword
             // 
-            this.BoxPassword.Location = new System.Drawing.Point(23, 134);
+            this.BoxPassword.Location = new System.Drawing.Point(29, 134);
             this.BoxPassword.Name = "BoxPassword";
             this.BoxPassword.PasswordChar = '*';
             this.BoxPassword.Size = new System.Drawing.Size(290, 20);
@@ -54,7 +55,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(117, 185);
+            this.button1.Location = new System.Drawing.Point(119, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 6;
@@ -65,7 +66,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 26);
+            this.label1.Location = new System.Drawing.Point(121, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 7;
@@ -74,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(138, 101);
+            this.label2.Location = new System.Drawing.Point(140, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 8;
@@ -84,12 +85,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(344, 241);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BoxPassword);
             this.Controls.Add(this.BoxUser);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.Text = "Japonés v0.0.1";
             this.Load += new System.EventHandler(this.Principal_Load);
