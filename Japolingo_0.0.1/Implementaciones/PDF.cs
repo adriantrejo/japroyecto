@@ -11,7 +11,7 @@ namespace Japolingo_0._0._1.Implementaciones
     {
         public string abrir(string lecc)
             {
-                return "C:\\Users\\energ\\Desktop\\Japo\\Japolingo_0.0.1\\src\\PDF\\" + lecc + ".pdf";
+                return Launcher.Directory.Path + "\\src\\PDF\\" + lecc + ".pdf";
             }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,6 +88,26 @@ namespace Japolingo_0._0._1.Implementaciones
             {
                 MessageBox.Show("El error es" + e.ToString());
                 return new List<int>();
+            }
+        }
+        public void ColorP(TextBox txtb, List<int> correctas, List<string> respuestasC, int i)
+        {
+            try
+            {
+                MessageBox.Show("La correcta es " + respuestasC[9 - i]);
+                if (correctas.Contains(9 - i))
+                {
+                    txtb.BackColor = Color.Green;
+                }
+                else
+                {
+                    txtb.BackColor = Color.Red;
+                    txtb.Text = respuestasC[9 - i];
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("La excepción es " + ex);
             }
         }
     }

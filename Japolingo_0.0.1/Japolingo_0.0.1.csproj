@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -71,12 +72,14 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Implementaciones\Examen.cs" />
+    <Compile Include="Implementaciones\Log.cs" />
     <Compile Include="Implementaciones\Login.cs" />
     <Compile Include="Implementaciones\Nivel.cs" />
     <Compile Include="Implementaciones\PDF.cs" />
     <Compile Include="Implementaciones\SQLConexion.cs" />
     <Compile Include="Interfaces\Iconexion.cs" />
     <Compile Include="Interfaces\IExamen.cs" />
+    <Compile Include="Interfaces\ILog.cs" />
     <Compile Include="Interfaces\Ipdf.cs" />
     <Compile Include="Launcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,6 +118,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Logs\" />
     <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>

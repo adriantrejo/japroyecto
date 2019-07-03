@@ -25,6 +25,8 @@ namespace Japolingo_0._0._1.Implementaciones
             catch (Exception e)
             {
                 MessageBox.Show("El error es" + e.ToString());
+                Log olog = new Log(@"C:\Users\energ\Desktop\Japroyecto\japroyecto\Japolingo_0.0.1\Logs");
+                olog.Add(e.ToString());
             }
         }
     }

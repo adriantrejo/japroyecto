@@ -38,13 +38,11 @@ namespace Japolingo_0._0._1.GUI
 
             //Rellenamos los labels de el formulario
             int i = 0;
-            foreach (Label lbl in this.Controls.OfType<Label>())
+            var validItems = this.Controls.OfType<Label>().Where(j => !j.Text.Contains("Pregunta"));
+            foreach (var lbl in validItems)
             {
-                if (!lbl.Text.Contains("Pregunta"))
-                {
-                    lbl.Text = preguntas[9-i];
-                    i++;
-                }
+                lbl.Text = preguntas[9-i];
+                i++;
             }
         }
 
@@ -75,15 +73,7 @@ namespace Japolingo_0._0._1.GUI
             int i = 0;
             foreach (TextBox txtb in this.Controls.OfType<TextBox>())
             {
-                if (correctas.Contains(9-i))
-                {
-                    txtb.BackColor = Color.Green;
-                }
-                else
-                {
-                    txtb.BackColor = Color.Red;
-                    txtb.Text = respuestasC[9-i];
-                }
+                exam.ColorP(txtb, correctas, respuestasC,i);
                 i++;
             }
         }
