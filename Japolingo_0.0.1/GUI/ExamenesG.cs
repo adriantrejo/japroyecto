@@ -11,14 +11,15 @@ using Japolingo_0._0._1.Implementaciones;
 
 namespace Japolingo_0._0._1.GUI
 {
-    public partial class Examenes : Form
+    public partial class ExamenesG : Form
     {
         List<string> respuestasI = new List<string>();
         List<string> respuestasC = new List<string>();
 
-        public Examenes()
+        public ExamenesG()
         {
             InitializeComponent();
+            this.CenterToScreen();
             foreach (Label lbl in this.Controls.OfType<Label>())
             {
                 lbl.BackColor = Color.Transparent;
@@ -76,6 +77,11 @@ namespace Japolingo_0._0._1.GUI
                 exam.ColorP(txtb, correctas, respuestasC,i);
                 i++;
             }
+        }
+
+        private void TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

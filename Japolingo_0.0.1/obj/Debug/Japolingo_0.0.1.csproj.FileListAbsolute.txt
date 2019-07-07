@@ -34,7 +34,6 @@ C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Japolingo_0.0.1.
 C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Interop.AcroPDFLib.dll
 C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Japolingo_0.0.1.csproj.ResolveComReference.cache
-C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Japolingo_0._0._1.GUI.Examenes.resources
 C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Japolingo_0._0._1.GUI.Lecciones.resources
 C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Japolingo_0._0._1.GUI.LoginForm.resources
 C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Japolingo_0._0._1.GUI.MainForm.resources
@@ -61,3 +60,6 @@ C:\Users\energ\Desktop\Japroyecto\japroyecto\Japolingo_0.0.1\bin\Debug\Japolingo
 C:\Users\energ\Desktop\Japroyecto\japroyecto\Japolingo_0.0.1\bin\Debug\Japolingo_0.0.1.pdb
 C:\Users\energ\Desktop\Japroyecto\japroyecto\Japolingo_0.0.1\bin\Debug\Interop.AcroPDFLib.dll
 C:\Users\energ\Desktop\Japroyecto\japroyecto\Japolingo_0.0.1\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Japolingo_0._0._1.GUI.ExamenesG.resources
+C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Japolingo_0._0._1.GUI.ExamenesM.resources
+C:\Users\adrian.trejo.gil\Desktop\TFG\Japolingo_0.0.1\obj\Debug\Japolingo_0._0._1.GUI.ExamenesK.resources

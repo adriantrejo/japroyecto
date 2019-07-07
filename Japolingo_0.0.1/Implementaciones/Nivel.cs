@@ -18,14 +18,14 @@ namespace Japolingo_0._0._1.Implementaciones
                 SQLConexion con = new SQLConexion(Launcher.Cadena.CadenaC);
                 con.open();
                 String[] sqlParams = new string[] { usuario };
-                DataTable dt = con.select("Select Nivel from Usuarios where username =@1", sqlParams);
+                DataTable dt = con.select("Select Nivel from Usuarios where [Nombre Usuarioc] =@1", sqlParams);
                 MessageBox.Show("Su nivel de usuario es " + dt.Rows[0][0].ToString());
                 con.close();
             }
             catch (Exception e)
             {
-                MessageBox.Show("El error es" + e.ToString());
-                Log olog = new Log(@"C:\Users\energ\Desktop\Japroyecto\japroyecto\Japolingo_0.0.1\Logs");
+                MessageBox.Show("Ha sucedido un error, por favor contacte con soporte");
+                Log olog = new Log(Launcher.Directory.Path + "\\Logs");
                 olog.Add(e.ToString());
             }
         }

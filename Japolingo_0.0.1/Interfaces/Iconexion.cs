@@ -7,8 +7,7 @@ namespace Japolingo_0._0._1.Interfaces
     {
         void open();
         void close();
-        /*
-        int select();
+        /*DataTable select();
         int update();
         int insert();*/
     }

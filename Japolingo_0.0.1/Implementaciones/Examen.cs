@@ -36,7 +36,9 @@ namespace Japolingo_0._0._1.Implementaciones
             }
             catch (Exception e)
             {
-                MessageBox.Show("El error es" + e.ToString());
+                MessageBox.Show("Ha sucedido un error, por favor contacte con soporte");
+                Log olog = new Log(Launcher.Directory.Path + "\\Logs");
+                olog.Add(e.ToString());
             }
         }
         public List<List<string>> Randomize(int n, List<string> listap, List<string> listar)
@@ -66,7 +68,9 @@ namespace Japolingo_0._0._1.Implementaciones
             }
             catch (Exception e)
             {
-                MessageBox.Show("El error es" + e.ToString());
+                MessageBox.Show("Ha sucedido un error, por favor contacte con soporte");
+                Log olog = new Log(Launcher.Directory.Path + "\\Logs");
+                olog.Add(e.ToString());
                 return new List<List<string>>();
             }
         }
@@ -86,7 +90,9 @@ namespace Japolingo_0._0._1.Implementaciones
             }
             catch (Exception e)
             {
-                MessageBox.Show("El error es" + e.ToString());
+                MessageBox.Show("Ha sucedido un error, por favor contacte con soporte");
+                Log olog = new Log(Launcher.Directory.Path + "\\Logs");
+                olog.Add(e.ToString());
                 return new List<int>();
             }
         }
@@ -105,9 +111,11 @@ namespace Japolingo_0._0._1.Implementaciones
                     txtb.Text = respuestasC[9 - i];
                 }
             }
-            catch(Exception ex)
+            catch(Exception e)
             {
-                MessageBox.Show("La excepción es " + ex);
+                MessageBox.Show("Ha sucedido un error, por favor contacte con soporte");
+                Log olog = new Log(Launcher.Directory.Path + "\\Logs");
+                olog.Add(e.ToString());
             }
         }
     }
