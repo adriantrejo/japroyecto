@@ -24,6 +24,7 @@ namespace Japolingo_0._0._1
         public static class Userdata
         {
             public static string Nombreusuario;
+            public static string IdUsuario;
         }
         public static class Cadena
         {

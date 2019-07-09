@@ -37,5 +37,10 @@ namespace Japolingo_0._0._1.GUI
             new Registro().Show();
             */
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            new RegisterForm().Show();
+        }
     }
 }

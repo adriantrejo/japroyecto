@@ -16,10 +16,11 @@ namespace Japolingo_0._0._1.Implementaciones
                 SQLConexion con = new SQLConexion(Launcher.Cadena.CadenaC);
                 con.open();
                 String[] sqlParams = new string[] {usuario, password};
-                DataTable dt = con.select("Select [Nombre Usuario] from Usuarios where [Nombre Usuario] =@1 and Password=@2", sqlParams);
+                DataTable dt = con.select("Select Id_Usuario from Usuarios where [Nombre Usuario] =@1 and Password=@2", sqlParams);
 
                 if (dt.Rows.Count > 0)
                 {
+                    Launcher.Userdata.IdUsuario = dt.Rows[0][0].ToString();
                     con.close();
                     new MainForm().Show();
                 }
