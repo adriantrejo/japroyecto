@@ -52,6 +52,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ExamenesG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +112,7 @@
     <Compile Include="GUI\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Implementaciones\Estadistica.cs" />
     <Compile Include="Implementaciones\Examen.cs" />
     <Compile Include="Implementaciones\Log.cs" />
     <Compile Include="Implementaciones\Login.cs" />
@@ -118,6 +126,9 @@
     <Compile Include="Interfaces\Ipdf.cs" />
     <Compile Include="Launcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ExamenesG.resx">
       <DependentUpon>ExamenesG.cs</DependentUpon>
     </EmbeddedResource>

@@ -83,3 +83,5 @@ C:\Users\energ\Desktop\TFGJ\07-07-2019\japroyecto\Japolingo_0.0.1\obj\Debug\Japo
 C:\Users\energ\Desktop\TFGJ\07-07-2019\japroyecto\Japolingo_0.0.1\obj\Debug\Japolingo_0.0.1.exe
 C:\Users\energ\Desktop\TFGJ\07-07-2019\japroyecto\Japolingo_0.0.1\obj\Debug\Japolingo_0.0.1.pdb
 C:\Users\energ\Desktop\TFGJ\07-07-2019\japroyecto\Japolingo_0.0.1\obj\Debug\Japolingo_0._0._1.GUI.RegisterForm.resources
+C:\Users\energ\Desktop\TFGJ\07-07-2019\japroyecto\Japolingo_0.0.1\obj\Debug\Japolingo_0.0.1.csprojAssemblyReference.cache
+C:\Users\energ\Desktop\TFGJ\07-07-2019\japroyecto\Japolingo_0.0.1\obj\Debug\Japolingo_0._0._1.GUI.Estadisticas.resources

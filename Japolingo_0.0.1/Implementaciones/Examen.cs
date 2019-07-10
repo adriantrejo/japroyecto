@@ -183,11 +183,11 @@ namespace Japolingo_0._0._1.Implementaciones
                 string lastId = dt1.Rows[0][0].ToString();
                 for (int i = 0; i < ids.Count; i++)
                 {
-                    lastId = (System.Convert.ToInt32(lastId) + 1).ToString();
-                    int aux = 1;
+                    lastId = (Convert.ToInt32(lastId) + 1).ToString();
+                    int aux = 0;
                     if (puntuaciones.Contains(i))
                     {
-                        aux = -1;
+                        aux = 1;
                     }
                     String[] sqlParams2 = new String[] { lastId, Launcher.Userdata.IdUsuario, ids[i], aux.ToString() };
                     int dt2 = con.update("INSERT INTO Preguntas_Contestadas (Id, Id_usuario, Id_pregunta, Scoring) VALUES (@1,@2,@3,@4)", sqlParams2);
