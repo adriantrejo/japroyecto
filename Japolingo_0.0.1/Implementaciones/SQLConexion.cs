@@ -113,5 +113,19 @@ namespace Japolingo_0._0._1.Implementaciones
                 return 0;
             }
         }
+        public void executeNonQuery(string insertString)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(insertString, con);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ha sucedido un error, por favor contacte con soporte");
+                Log olog = new Log(Launcher.Directory.Path + "\\Logs");
+                olog.Add(e.ToString());
+            }
+        }
     }
 }

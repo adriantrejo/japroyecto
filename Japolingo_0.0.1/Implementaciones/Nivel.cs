@@ -18,8 +18,8 @@ namespace Japolingo_0._0._1.Implementaciones
                 SQLConexion con = new SQLConexion(Launcher.Cadena.CadenaC);
                 con.open();
                 String[] sqlParams = new string[] { usuario };
-                DataTable dt = con.select("Select Nivel from Usuarios where [Nombre Usuarioc] =@1", sqlParams);
-                MessageBox.Show("Su nivel de usuario es " + dt.Rows[0][0].ToString());
+                DataTable dt = con.select("Select Nivel from Usuarios where [Nombre Usuario] =@1", sqlParams);
+                MessageBox.Show("La lección en la que estás actualmente es la Lección " + dt.Rows[0][0].ToString());
                 con.close();
             }
             catch (Exception e)
