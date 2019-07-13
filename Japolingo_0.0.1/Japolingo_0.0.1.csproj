@@ -114,6 +114,7 @@
     </Compile>
     <Compile Include="Implementaciones\Estadistica.cs" />
     <Compile Include="Implementaciones\Examen.cs" />
+    <Compile Include="Implementaciones\ExamenK.cs" />
     <Compile Include="Implementaciones\Log.cs" />
     <Compile Include="Implementaciones\Login.cs" />
     <Compile Include="Implementaciones\Nivel.cs" />
