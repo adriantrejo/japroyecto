@@ -46,7 +46,7 @@ namespace Japolingo_0._0._1.GUI
             List<string> Ides = exam.Id_preguntas;
             List<List<string>> dupla = new List<List<string>>(); //Creamos una lista de listas
 
-            dupla = exam.Randomize(10, preguntas,respuestas,Ides); //Ahora aleatorizamos las preguntas
+            dupla = exam.Randomize(10, preguntas, respuestas, Ides); //Ahora aleatorizamos las preguntas
             preguntas = dupla[0]; //Asignamos las preguntas y respuestas correspondientes
             respuestas = dupla[1];
             Ides = dupla[2];
@@ -61,18 +61,20 @@ namespace Japolingo_0._0._1.GUI
             int k = 0;
             foreach (TextBox txtb in myTextBoxes)
             {
-                if (respuestasC[9-k].Equals("Si") || (respuestasC[9-k].Equals("No")))
+                if (respuestasC[9 - k].Equals("Sí") || (respuestasC[9 - k].Equals("No")))
                 {
                     txtb.Hide();
                 }
                 k++;
             }
             //Asignamos groupBox
+
+            
             myGroupBoxes = new GroupBox[] { groupBox1, groupBox2, groupBox3, groupBox4, groupBox5, groupBox6, groupBox7, groupBox8, groupBox9, groupBox10};
             int l = 0;      
             foreach (GroupBox grp in myGroupBoxes)
             {
-                if (!respuestasC[l].Equals("Si") && (!respuestasC[l].Equals("No")))
+                if (!respuestasC[l].Equals("Sí") && !respuestasC[l].Equals("No"))
                 {
                     grp.Hide();
                 }
@@ -125,6 +127,7 @@ namespace Japolingo_0._0._1.GUI
             int j = 0;
             foreach (RadioButton rb in myRadioButtons)
             {
+                
                 exam.CheckBox(rb, Booleans, j);
                 j++;
             }
@@ -147,19 +150,14 @@ namespace Japolingo_0._0._1.GUI
                 exam.ColorP(txtb, correctas, respuestasC, i);
                 i++;
             }
-            var watch = System.Diagnostics.Stopwatch.StartNew();
             //Insertamos datos del examen en la BBDD
-            exam.InsertarPreguntas(correctas, listaIds_Contestados);
-            //Actualizamos nivel en el caso correcto
 
-            
-            // the code that you want to measure comes here
+            exam.InsertarPreguntas(correctas, listaIds_Contestados);
+
+            //Actualizamos nivel en el caso correcto
             
             exam.ActNivel(score, usrlvl);
 
-            watch.Stop();
-            var elapsedMs = watch.ElapsedMilliseconds;
-            MessageBox.Show("Elapsed is " + elapsedMs);
         }
 
         private void TextBox3_TextChanged(object sender, EventArgs e)
@@ -171,83 +169,143 @@ namespace Japolingo_0._0._1.GUI
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            textBox3.Text = radioButton1.Text.ToString();
+            if (respuestasC[0] == "Sí" || respuestasC[0] == "No")
+            {
+                textBox3.Text = radioButton1.Text.ToString();
+            }
         }
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            textBox3.Text = radioButton2.Text.ToString();
+            if (respuestasC[0] == "Sí" || respuestasC[0] == "No")
+            {
+                textBox3.Text = radioButton2.Text.ToString();
+            }
         }
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            textBox4.Text = radioButton4.Text.ToString();
+            if (respuestasC[1] == "Sí" || respuestasC[1] == "No")
+            {
+                textBox4.Text = radioButton4.Text.ToString();
+            }
         }
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            textBox4.Text = radioButton3.Text.ToString();
+            if (respuestasC[1] == "Sí" || respuestasC[1] == "No")
+            {
+                textBox4.Text = radioButton3.Text.ToString();
+            }
         }
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
-            textBox5.Text = radioButton6.Text.ToString();
+            if (respuestasC[2] == "Sí" || respuestasC[2] == "No")
+            {
+                textBox5.Text = radioButton6.Text.ToString();
+            }
         }
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-            textBox5.Text = radioButton5.Text.ToString();
+            if (respuestasC[2] == "Sí" || respuestasC[2] == "No")
+            {
+                textBox5.Text = radioButton5.Text.ToString();
+            }
         }
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
-            textBox6.Text = radioButton8.Text.ToString();
+            if (respuestasC[3] == "Sí" || respuestasC[3] == "No")
+            {
+                textBox6.Text = radioButton8.Text.ToString();
+            }
         }
         private void radioButton7_CheckedChanged(object sender, EventArgs e)
         {
-            textBox6.Text = radioButton7.Text.ToString();
+            if (respuestasC[3] == "Sí" || respuestasC[3] == "No")
+            {
+                textBox6.Text = radioButton7.Text.ToString();
+            }
         }
         private void radioButton10_CheckedChanged(object sender, EventArgs e)
         {
-            textBox7.Text = radioButton10.Text.ToString();
+            if (respuestasC[4] == "Sí" || respuestasC[4] == "No")
+            {
+                textBox7.Text = radioButton10.Text.ToString();
+            }
         }
         private void radioButton9_CheckedChanged(object sender, EventArgs e)
         {
-            textBox7.Text = radioButton9.Text.ToString();
+            if (respuestasC[4] == "Sí" || respuestasC[4] == "No")
+            {
+                textBox7.Text = radioButton9.Text.ToString();
+            }
         }
         private void radioButton12_CheckedChanged(object sender, EventArgs e)
         {
-            textBox8.Text = radioButton12.Text.ToString();
+            if (respuestasC[5] == "Sí" || respuestasC[5] == "No")
+            {
+                textBox8.Text = radioButton12.Text.ToString();
+            }
         }
         private void radioButton11_CheckedChanged(object sender, EventArgs e)
         {
-            textBox8.Text = radioButton11.Text.ToString();
+            if (respuestasC[5] == "Sí" || respuestasC[5] == "No")
+            {
+                textBox8.Text = radioButton11.Text.ToString();
+            }
         }
         private void radioButton14_CheckedChanged(object sender, EventArgs e)
         {
-            textBox9.Text = radioButton14.Text.ToString();
+            if (respuestasC[6] == "Sí" || respuestasC[6] == "No")
+            {
+                textBox9.Text = radioButton14.Text.ToString();
+            }
         }
         private void radioButton13_CheckedChanged(object sender, EventArgs e)
         {
-            textBox9.Text = radioButton13.Text.ToString();
+            if (respuestasC[6] == "Sí" || respuestasC[6] == "No")
+            {
+                textBox9.Text = radioButton13.Text.ToString();
+            }
         }
         private void radioButton16_CheckedChanged(object sender, EventArgs e)
         {
-            textBox10.Text = radioButton16.Text.ToString();
+            if (respuestasC[7] == "Sí" || respuestasC[7] == "No")
+            {
+                textBox10.Text = radioButton16.Text.ToString();
+            }
         }
         private void radioButton15_CheckedChanged(object sender, EventArgs e)
         {
-            textBox10.Text = radioButton15.Text.ToString();
+            if (respuestasC[7] == "Sí" || respuestasC[7] == "No")
+            {
+                textBox10.Text = radioButton15.Text.ToString();
+            }
         }
         private void radioButton18_CheckedChanged(object sender, EventArgs e)
         {
-            textBox11.Text = radioButton18.Text.ToString();
+            if (respuestasC[8] == "Sí" || respuestasC[8] == "No")
+            {
+                textBox11.Text = radioButton18.Text.ToString();
+            }
         }
         private void radioButton17_CheckedChanged(object sender, EventArgs e)
         {
-            textBox11.Text = radioButton17.Text.ToString();
+            if (respuestasC[8] == "Sí" || respuestasC[8] == "No")
+            {
+                textBox11.Text = radioButton17.Text.ToString();
+            }
         }
         private void radioButton20_CheckedChanged(object sender, EventArgs e)
         {
-            textBox12.Text = radioButton20.Text.ToString();
+            if (respuestasC[9] == "Sí" || respuestasC[9] == "No")
+            {
+                textBox12.Text = radioButton20.Text.ToString();
+            }
         }
         private void radioButton19_CheckedChanged(object sender, EventArgs e)
         {
-            textBox12.Text = radioButton19.Text.ToString();
+            if (respuestasC[9] == "Sí" || respuestasC[9] == "No")
+            {
+                textBox12.Text = radioButton19.Text.ToString();
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Japolingo_0._0._1.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Lecciones().Show();
+            new ExamenesM().Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace Japolingo_0._0._1.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new ExamenesM().Show();
+            new ExamenesG().Show();
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -1,0 +1,47 @@
+14/07/2019 17:22:04 - System.UnauthorizedAccessException: Acceso denegado a la ruta de acceso 'C:\test.txt'.
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   en System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   en System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   en System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   en System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding)
+   en System.IO.File.WriteAllLines(String path, String[] contents)
+   en Japolingo_0._0._1.Implementaciones.Kanji.SaveMatrix(Int32[,] Matrix) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 183
+14/07/2019 17:47:53 - System.IO.FileNotFoundException: No se pudo encontrar el archivo 'C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\src\Kanji0.txt'.
+Nombre de archivo: 'C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\src\Kanji0.txt'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   en System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   en System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   en System.IO.StreamReader..ctor(String path, Encoding encoding)
+   en System.IO.File.InternalReadAllLines(String path, Encoding encoding)
+   en System.IO.File.ReadAllLines(String path)
+   en Japolingo_0._0._1.Implementaciones.Kanji.GetMatrix(String path) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 227
+14/07/2019 17:47:54 - System.IndexOutOfRangeException: Índice fuera de los límites de la matriz.
+   en Japolingo_0._0._1.Implementaciones.Kanji.Diference(Int32[,] Matrix1, Int32[,] Matrix2) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 122
+14/07/2019 17:47:54 - System.InvalidOperationException: La secuencia no contiene elementos
+   en System.Linq.Enumerable.Max(IEnumerable`1 source)
+   en Japolingo_0._0._1.Implementaciones.Kanji.NormInfMatrix(Int32[,] Matrix) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 83
+14/07/2019 17:49:21 - System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en Japolingo_0._0._1.Implementaciones.Kanji.<>c.<GetMatrix>b__6_1(String i) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 227
+   en System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   en System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   en System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   en Japolingo_0._0._1.Implementaciones.Kanji.<>c.<GetMatrix>b__6_0(String l) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 227
+   en System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   en System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   en System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   en Japolingo_0._0._1.Implementaciones.Kanji.GetMatrix(String path) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 227
+14/07/2019 17:49:22 - System.IndexOutOfRangeException: Índice fuera de los límites de la matriz.
+   en Japolingo_0._0._1.Implementaciones.Kanji.Diference(Int32[,] Matrix1, Int32[,] Matrix2) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 122
+14/07/2019 17:49:22 - System.InvalidOperationException: La secuencia no contiene elementos
+   en System.Linq.Enumerable.Max(IEnumerable`1 source)
+   en Japolingo_0._0._1.Implementaciones.Kanji.NormInfMatrix(Int32[,] Matrix) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 83
+14/07/2019 17:57:44 - System.IndexOutOfRangeException: Índice fuera de los límites de la matriz.
+   en Japolingo_0._0._1.Implementaciones.Kanji.Diference(Int32[,] Matrix1, Int32[,] Matrix2) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 122
+14/07/2019 17:57:44 - System.InvalidOperationException: La secuencia no contiene elementos
+   en System.Linq.Enumerable.Max(IEnumerable`1 source)
+   en Japolingo_0._0._1.Implementaciones.Kanji.NormInfMatrix(Int32[,] Matrix) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 83

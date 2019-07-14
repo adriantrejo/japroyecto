@@ -1,6 +1,6 @@
 ﻿namespace Japolingo_0._0._1.GUI
 {
-    partial class ExamenesK
+    partial class AKanji
     {
         /// <summary>
         /// Required designer variable.
@@ -43,110 +43,122 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(43, 333);
+            this.button1.Location = new System.Drawing.Point(29, 216);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 32);
+            this.button1.Size = new System.Drawing.Size(69, 21);
             this.button1.TabIndex = 0;
             this.button1.Text = "Ayuda";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(385, 333);
+            this.button2.Location = new System.Drawing.Point(257, 216);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 32);
+            this.button2.Size = new System.Drawing.Size(69, 21);
             this.button2.TabIndex = 1;
             this.button2.Text = "Enviar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(246, 16);
+            this.label1.Location = new System.Drawing.Point(164, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 20);
+            this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Kanji";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(399, 96);
+            this.label2.Location = new System.Drawing.Point(266, 62);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Onyomi";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(399, 133);
+            this.label3.Location = new System.Drawing.Point(266, 86);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Kunyomi";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(246, 55);
+            this.label4.Location = new System.Drawing.Point(164, 36);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "ValorK";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(467, 96);
+            this.label5.Location = new System.Drawing.Point(311, 62);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "ValorO";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(467, 133);
+            this.label6.Location = new System.Drawing.Point(311, 86);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 20);
+            this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "ValorKu";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(43, 30);
+            this.button3.Location = new System.Drawing.Point(29, 19);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 32);
+            this.button3.Size = new System.Drawing.Size(69, 21);
             this.button3.TabIndex = 8;
             this.button3.Text = "Atrás";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Kanjis
             // 
             this.Kanjis.FormattingEnabled = true;
-            this.Kanjis.ItemHeight = 20;
-            this.Kanjis.Location = new System.Drawing.Point(43, 96);
+            this.Kanjis.Location = new System.Drawing.Point(29, 62);
+            this.Kanjis.Margin = new System.Windows.Forms.Padding(2);
             this.Kanjis.Name = "Kanjis";
-            this.Kanjis.Size = new System.Drawing.Size(103, 204);
+            this.Kanjis.Size = new System.Drawing.Size(70, 134);
             this.Kanjis.TabIndex = 9;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(174, 96);
+            this.panel1.Location = new System.Drawing.Point(116, 62);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 200);
+            this.panel1.Size = new System.Drawing.Size(133, 130);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseUp);
             // 
-            // ExamenesK
+            // AKanji
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 392);
+            this.ClientSize = new System.Drawing.Size(366, 255);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Kanjis);
             this.Controls.Add(this.button3);
@@ -158,8 +170,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "ExamenesK";
-            this.Text = "ExamenesK";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "AKanji";
+            this.Text = "AKanji";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,0 +1,8 @@
+13/07/2019 23:47:15 - System.IndexOutOfRangeException: Índice fuera de los límites de la matriz.
+   en Japolingo_0._0._1.Implementaciones.Kanji.HashMap(Bitmap bitmap) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 49
+13/07/2019 23:54:32 - System.IO.IOException: Controlador no válido.
+
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.Console.GetBufferInfo(Boolean throwOnNoConsole, Boolean& succeeded)
+   en System.Console.Clear()
+   en Japolingo_0._0._1.Implementaciones.Kanji.HashMap(Bitmap bitmap) en C:\Users\energ\Desktop\TFG_HOY\japroyecto\Japolingo_0.0.1\Implementaciones\Kanji.cs:línea 43

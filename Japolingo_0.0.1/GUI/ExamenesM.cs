@@ -25,12 +25,12 @@ namespace Japolingo_0._0._1.GUI
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            new ExamenesG().Show();
+            new Lecciones().Show();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            new ExamenesK().Show();
+            new AKanji().Show();
         }
     }
 }

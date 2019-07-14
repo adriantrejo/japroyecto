@@ -113,7 +113,7 @@ namespace Japolingo_0._0._1.Implementaciones
                 List<int> correctas = new List<int>();
                 for (int i = 0; i < respuestasI.Count; i++)
                 {
-                    if (SustituirTildes(respuestasI[i]).Equals(SustituirTildes(respuestasC[i])))
+                    if (respuestasI[i].Equals(respuestasC[i]))
                     {
                         correctas.Add(i);
                     }
@@ -229,7 +229,7 @@ namespace Japolingo_0._0._1.Implementaciones
                 List<bool> RadioButtons = new List<bool> { };
                 for (int i = 0; i < respuestasC.Count(); i++)
                 {
-                    if (SustituirTildes(respuestasC[i]).Equals("Si"))
+                    if ((respuestasC[i]).Equals("Sí"))
                     {
                         RadioButtons.Add(true);
                         RadioButtons.Add(false);
@@ -260,7 +260,7 @@ namespace Japolingo_0._0._1.Implementaciones
                 {
                     if (!SustituirTildes(respuestasI[i]).Equals(SustituirTildes(respuestasC[i])))
                     {
-                        if (!SustituirTildes(respuestasC[i]).Equals("Si"))
+                        if (!(respuestasC[i]).Equals("Sí"))
                         {
                             RadioButtonsC.Add(false);
                             RadioButtonsC.Add(true);
