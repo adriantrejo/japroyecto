@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Japolingo_0._0._1.GUI
 {
-    public partial class Estadisticas : Form
+    public partial class Estadísticas : Form
     {
-        public Estadisticas()
+        public Estadísticas()
         {
             InitializeComponent();
             this.CenterToScreen();
 
-            Estadistica stats = new Estadistica();
+            Estadística stats = new Estadística();
             List<string> type = new List<string> ();
             List<double> score = new List<double>();
 

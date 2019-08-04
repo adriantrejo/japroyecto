@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Japolingo_0._0._1.Implementaciones
 {
-    class Estadistica
+    class Estadística
     {
         public void GetStatistics(List<string> type, List<double> score, string day1, string day2)
         {

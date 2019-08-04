@@ -106,7 +106,7 @@
             this.Controls.Add(this.BoxUser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
-            this.Text = "Japonés v0.0.1";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

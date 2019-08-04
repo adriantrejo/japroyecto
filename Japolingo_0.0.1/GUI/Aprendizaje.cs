@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Japolingo_0._0._1.GUI
 {
-    public partial class ExamenesM : Form
+    public partial class Aprendizaje : Form
     {
-        public ExamenesM()
+        public Aprendizaje()
         {
             InitializeComponent();
             this.CenterToScreen();
@@ -30,7 +30,7 @@ namespace Japolingo_0._0._1.GUI
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            new AKanji().Show();
+            new Kanji().Show();
         }
     }
 }

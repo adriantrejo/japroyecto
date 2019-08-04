@@ -1,6 +1,6 @@
 ﻿namespace Japolingo_0._0._1.GUI
 {
-    partial class AKanji
+    partial class Kanji
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kanji));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.ValorK = new System.Windows.Forms.Label();
+            this.ValorO = new System.Windows.Forms.Label();
+            this.ValorKu = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.Kanjis = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -65,7 +66,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 10);
+            this.label1.Location = new System.Drawing.Point(144, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
@@ -92,35 +93,32 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Kunyomi";
             // 
-            // label4
+            // ValorK
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(164, 36);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "ValorK";
+            this.ValorK.AutoSize = true;
+            this.ValorK.Location = new System.Drawing.Point(178, 27);
+            this.ValorK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ValorK.Name = "ValorK";
+            this.ValorK.Size = new System.Drawing.Size(0, 13);
+            this.ValorK.TabIndex = 5;
             // 
-            // label5
+            // ValorO
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(311, 62);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "ValorO";
+            this.ValorO.AutoSize = true;
+            this.ValorO.Location = new System.Drawing.Point(311, 62);
+            this.ValorO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ValorO.Name = "ValorO";
+            this.ValorO.Size = new System.Drawing.Size(0, 13);
+            this.ValorO.TabIndex = 6;
             // 
-            // label6
+            // ValorKu
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(311, 86);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "ValorKu";
+            this.ValorKu.AutoSize = true;
+            this.ValorKu.Location = new System.Drawing.Point(311, 86);
+            this.ValorKu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ValorKu.Name = "ValorKu";
+            this.ValorKu.Size = new System.Drawing.Size(0, 13);
+            this.ValorKu.TabIndex = 7;
             // 
             // button3
             // 
@@ -136,11 +134,15 @@
             // Kanjis
             // 
             this.Kanjis.FormattingEnabled = true;
+            this.Kanjis.Items.AddRange(new object[] {
+            "三",
+            "火"});
             this.Kanjis.Location = new System.Drawing.Point(29, 62);
             this.Kanjis.Margin = new System.Windows.Forms.Padding(2);
             this.Kanjis.Name = "Kanjis";
             this.Kanjis.Size = new System.Drawing.Size(70, 134);
             this.Kanjis.TabIndex = 9;
+            this.Kanjis.Click += new System.EventHandler(this.Kanjis_Click);
             // 
             // panel1
             // 
@@ -154,7 +156,7 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseUp);
             // 
-            // AKanji
+            // Kanji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,17 +164,18 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Kanjis);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.ValorKu);
+            this.Controls.Add(this.ValorO);
+            this.Controls.Add(this.ValorK);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "AKanji";
-            this.Text = "AKanji";
+            this.Name = "Kanji";
+            this.Text = "Kanji";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,9 +188,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label ValorK;
+        private System.Windows.Forms.Label ValorO;
+        private System.Windows.Forms.Label ValorKu;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox Kanjis;
         private System.Windows.Forms.Panel panel1;

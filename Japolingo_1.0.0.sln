@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Japolingo_0.0.1", "Japolingo_0.0.1\Japolingo_0.0.1.csproj", "{14B7EB3E-7C07-4AFA-9F7C-26F56FF099C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Japolingo_1.0.0", "Japolingo_0.0.1\Japolingo_1.0.0.csproj", "{14B7EB3E-7C07-4AFA-9F7C-26F56FF099C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

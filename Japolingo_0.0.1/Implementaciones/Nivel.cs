@@ -24,9 +24,16 @@ namespace Japolingo_0._0._1.Implementaciones
             }
             catch (Exception e)
             {
-                MessageBox.Show("Ha sucedido un error, por favor contacte con soporte");
+                MessageBox.Show("Ha sucedido un error");
                 Log olog = new Log(Launcher.Directory.Path + "\\Logs");
                 olog.Add(e.ToString());
+                if (MessageBox.Show("¿Quieres enviar un reporte de la incidencia?", "Reporte", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
+                {
+                    Reporting report = new Reporting();
+                    report.SendLog(Launcher.Directory.Path + "\\Logs\\" + olog.GetNameFile());
+                }
+                Application.Exit();
+
             }
         }
     }

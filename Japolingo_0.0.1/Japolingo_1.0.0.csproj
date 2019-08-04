@@ -64,29 +64,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\Estadisticas.cs">
+    <Compile Include="GUI\Estadísticas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Estadisticas.Designer.cs">
-      <DependentUpon>Estadisticas.cs</DependentUpon>
+    <Compile Include="GUI\Estadísticas.Designer.cs">
+      <DependentUpon>Estadísticas.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ExamenesG.cs">
+    <Compile Include="GUI\Examenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ExamenesG.Designer.cs">
-      <DependentUpon>ExamenesG.cs</DependentUpon>
+    <Compile Include="GUI\Examenes.Designer.cs">
+      <DependentUpon>Examenes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\AKanji.cs">
+    <Compile Include="GUI\Kanji.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\AKanji.Designer.cs">
-      <DependentUpon>AKanji.cs</DependentUpon>
+    <Compile Include="GUI\Kanji.Designer.cs">
+      <DependentUpon>Kanji.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ExamenesM.cs">
+    <Compile Include="GUI\Aprendizaje.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ExamenesM.Designer.cs">
-      <DependentUpon>ExamenesM.cs</DependentUpon>
+    <Compile Include="GUI\Aprendizaje.Designer.cs">
+      <DependentUpon>Aprendizaje.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Lecciones.cs">
       <SubType>Form</SubType>
@@ -112,7 +112,7 @@
     <Compile Include="GUI\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Implementaciones\Estadistica.cs" />
+    <Compile Include="Implementaciones\Estadística.cs" />
     <Compile Include="Implementaciones\Examen.cs" />
     <Compile Include="Implementaciones\Kanji.cs" />
     <Compile Include="Implementaciones\Log.cs" />
@@ -120,6 +120,7 @@
     <Compile Include="Implementaciones\Nivel.cs" />
     <Compile Include="Implementaciones\PDF.cs" />
     <Compile Include="Implementaciones\Register.cs" />
+    <Compile Include="Implementaciones\Reporting.cs" />
     <Compile Include="Implementaciones\SQLConexion.cs" />
     <Compile Include="Interfaces\Iconexion.cs" />
     <Compile Include="Interfaces\IExamen.cs" />
@@ -127,17 +128,17 @@
     <Compile Include="Interfaces\Ipdf.cs" />
     <Compile Include="Launcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\Estadisticas.resx">
-      <DependentUpon>Estadisticas.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Estadísticas.resx">
+      <DependentUpon>Estadísticas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ExamenesG.resx">
-      <DependentUpon>ExamenesG.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Examenes.resx">
+      <DependentUpon>Examenes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\AKanji.resx">
-      <DependentUpon>AKanji.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Kanji.resx">
+      <DependentUpon>Kanji.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ExamenesM.resx">
-      <DependentUpon>ExamenesM.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Aprendizaje.resx">
+      <DependentUpon>Aprendizaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lecciones.resx">
       <DependentUpon>Lecciones.cs</DependentUpon>
@@ -175,7 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Logs\" />
-    <Folder Include="src\" />
+    <Folder Include="Src\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">

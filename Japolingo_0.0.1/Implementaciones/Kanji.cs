@@ -91,13 +91,15 @@ namespace Japolingo_0._0._1.Implementaciones
             }
 
         }
-        public int Distance(int[,] Matrix1, int[,] Matrix2)
+        public float Distance(int[,] Matrix1, int[,] Matrix2)
         {
             try
             {
                 int numberofColumns = Matrix1.GetLength(1);
                 int numberofRows = Matrix1.GetLength(0);
+                int poss = numberofColumns * numberofRows;
                 int distance = 0;
+                float perc = 0;
 
                 for (int i = 0; i < numberofRows; i++)
                 {
@@ -106,7 +108,8 @@ namespace Japolingo_0._0._1.Implementaciones
                         distance+= Math.Abs(Matrix1[i, j] - Matrix2[i, j]);
                     }
                 }
-                return distance;
+                perc = float.Parse(distance.ToString()) / float.Parse(poss.ToString());
+                return perc;
                 //return (NormInfMatrix(Diference(Matrix1, Matrix2)));
             }
 
@@ -251,19 +254,71 @@ namespace Japolingo_0._0._1.Implementaciones
         }
         public T[,] JaggedToMultidimensional<T>(T[][] jaggedArray)
         {
-            int rows = jaggedArray.Length;
-            int cols = jaggedArray.Max(subArray => subArray.Length);
-            T[,] array = new T[rows, cols];
-            for (int i = 0; i < rows; i++)
+            try
             {
-                cols = jaggedArray[i].Length;
-                for (int j = 0; j < cols; j++)
+                int rows = jaggedArray.Length;
+                int cols = jaggedArray.Max(subArray => subArray.Length);
+                T[,] array = new T[rows, cols];
+                for (int i = 0; i < rows; i++)
                 {
-                    array[i, j] = jaggedArray[i][j];
+                    cols = jaggedArray[i].Length;
+                    for (int j = 0; j < cols; j++)
+                    {
+                        array[i, j] = jaggedArray[i][j];
+                    }
                 }
+                return array;
             }
-            return array;
-        }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ha sucedido un error, por favor contacte con soporte");
+                Log olog = new Log(Launcher.Directory.Path + "\\Logs");
+                olog.Add(e.ToString());
+                return new T[0, 0];
+            }
 
+        }
+        public List<string> returnlecture(string kanji)
+        {
+            try
+            {
+                string path = Launcher.Directory.Path + "\\src\\Kanjis\\kanjis.csv";
+
+                List<string> lectures = new List<string>();
+
+                List<string> list1 = new List<string>();
+                List<string> list2 = new List<string>();
+                List<string> list3 = new List<string>();
+                List<string> list4 = new List<string>();
+
+                using (var reader = new StreamReader(path))
+                {                   
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Split(',');
+
+                        list1.Add(values[0]);
+                        list2.Add(values[1]);
+                        list3.Add(values[2]);
+                        list4.Add(values[3]);
+                    }
+                }
+                int index = list2.FindIndex(a => a.Contains(kanji));
+
+                lectures.Add(list3[index]);
+                lectures.Add(list4[index]);
+                lectures.Add(list1[index]);
+
+                return lectures;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ha sucedido un error, por favor contacte con soporte");
+                Log olog = new Log(Launcher.Directory.Path + "\\Logs");
+                olog.Add(e.ToString());
+                return new List<string>();
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace Japolingo_0._0._1.Implementaciones
 {
     class Log
     {
-        private string Path = "";
+        public string Path = "";
 
 
         public Log(string Path)
@@ -28,7 +28,7 @@ namespace Japolingo_0._0._1.Implementaciones
         }
 
         #region HELPER
-        private string GetNameFile()
+        public string GetNameFile()
         {
             string nombre = "";
 

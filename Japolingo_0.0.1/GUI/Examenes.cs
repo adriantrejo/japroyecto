@@ -11,7 +11,7 @@ using Japolingo_0._0._1.Implementaciones;
 
 namespace Japolingo_0._0._1.GUI
 {
-    public partial class ExamenesG : Form
+    public partial class Examenes : Form
     {
         List<string> respuestasI = new List<string>();
         List<string> respuestasC = new List<string>();
@@ -20,7 +20,7 @@ namespace Japolingo_0._0._1.GUI
         GroupBox[] myGroupBoxes = new GroupBox[] { };
         RadioButton[] myRadioButtons = new RadioButton[] { };
         string usrlvl;
-        public ExamenesG()
+        public Examenes()
         {
             InitializeComponent();
             this.CenterToScreen();

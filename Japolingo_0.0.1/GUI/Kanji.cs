@@ -12,19 +12,20 @@ using System.Windows.Forms;
 
 namespace Japolingo_0._0._1.GUI
 {
-    public partial class AKanji : Form
+    public partial class Kanji : Form
     {
         
         int x = -1;
         int y = -1;
         bool moving = false;
+        int idKanji = 1;
 
         Graphics g;
         Pen pen;
         Bitmap surface;
         Graphics graph;
 
-        public AKanji()
+        public Kanji()
         {
             InitializeComponent();
             this.CenterToScreen();
@@ -75,18 +76,29 @@ namespace Japolingo_0._0._1.GUI
         private void button2_Click(object sender, EventArgs e)
         {
             var bitmap = surface;
-            Kanji kan = new Kanji();
+            Implementaciones.Kanji kan = new Implementaciones.Kanji();
             int[,] hashMatrix = kan.HashMap(bitmap);
             //kan.SaveMatrix(kan.Traspose(hashMatrix));
             
-            int[,] MatrixSaved = kan.GetMatrix(Launcher.Directory.Path + "\\src\\Kanjis\\Kanji0.txt");
-            int diference = kan.Distance(kan.Traspose(hashMatrix), MatrixSaved);
-            MessageBox.Show("La diferencia entre matrices es " + diference);
+            int[,] MatrixSaved = kan.GetMatrix(Launcher.Directory.Path + "\\src\\Kanjis\\"+idKanji+".txt");
+            float diference = kan.Distance(kan.Traspose(hashMatrix), MatrixSaved);
+            MessageBox.Show("El acierto en el kanji es de un " + (1-diference)*100 + " %");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Kanjis_Click(object sender, EventArgs e)
+        {
+            ValorK.Text = Kanjis.Text;
+            Implementaciones.Kanji ka = new Implementaciones.Kanji();
+            List<string> lectures = ka.returnlecture(Kanjis.Text);
+            ValorO.Text = lectures[0];
+            ValorKu.Text = lectures[1];
+            idKanji = int.Parse(lectures[2]);
+
         }
     }
 }
